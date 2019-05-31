@@ -101,7 +101,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFr-TD-1Me">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.5568627451" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.45098039215686275" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="LOG IN"/>
                                                 </button>
                                             </subviews>

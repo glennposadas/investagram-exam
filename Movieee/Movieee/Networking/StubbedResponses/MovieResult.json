@@ -1,0 +1,407 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 299537,
+            "original_language": "en",
+            "original_title": "Captain Marvel",
+            "overview": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+            "poster_path": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+            "release_date": "2019-03-06",
+            "title": "Captain Marvel",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 5171,
+            "popularity": 459.022
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6IZ84KFhNpy6htsJmwFVuK30pyp.jpg",
+            "genre_ids": [
+                53,
+                878
+            ],
+            "id": 429471,
+            "original_language": "en",
+            "original_title": "Captive State",
+            "overview": "Nearly a decade after occupation by an extraterrestrial force, the lives of a Chicago neighborhood on both sides of the conflict are explored.",
+            "poster_path": "/cVo7lylXAUDGuvDZBUYaP8Zjbku.jpg",
+            "release_date": "2019-03-15",
+            "title": "Captive State",
+            "video": false,
+            "vote_average": 4.8,
+            "vote_count": 115,
+            "popularity": 32.91
+        },
+        {
+            "backdrop_path": "/qsD5OHqW7DSnaQ2afwz8Ptht1Xb.jpg",
+            "first_air_date": "2011-04-17",
+            "genre_ids": [
+                10765,
+                18,
+                10759
+            ],
+            "id": 1399,
+            "name": "Game of Thrones",
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Game of Thrones",
+            "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+            "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+            "vote_average": 8.1,
+            "vote_count": 5982,
+            "popularity": 338.982
+        },
+        {
+            "original_name": "Chernobyl",
+            "id": 87108,
+            "name": "Chernobyl",
+            "vote_count": 93,
+            "vote_average": 7.9,
+            "first_air_date": "2019-05-06",
+            "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+            "genre_ids": [
+                18
+            ],
+            "original_language": "en",
+            "backdrop_path": "/900tHlUYUkp7Ol04XFSoAaEIXcT.jpg",
+            "overview": "A dramatization of the true story of one of the worst man-made catastrophes in history, the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
+            "origin_country": [
+                "US"
+            ],
+            "popularity": 316.926
+        },
+        {
+            "original_name": "Good Omens",
+            "id": 71915,
+            "name": "Good Omens",
+            "vote_count": 2,
+            "vote_average": 8.5,
+            "first_air_date": "2019-05-30",
+            "poster_path": "/hzEzugrfagYisxQXemGEuI4zcQA.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "original_language": "en",
+            "backdrop_path": "/6dLDmowSDMSnkNCYqFocdhM6hJN.jpg",
+            "overview": "In 2019 the world is on the brink of an apocalypse as humanity prepares for a final judgment. But follies ensue — Aziraphale, a somewhat fussy angel, and Crowley, a demon aren’t enthusiastic about the end of the world, and can’t seem to find the Antichrist.",
+            "origin_country": [
+                "GB",
+                "US"
+            ],
+            "popularity": 43.067
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hTFGxpVQoDTC8kN5aJ7qgY2eWG4.jpg",
+            "genre_ids": [
+                18,
+                80
+            ],
+            "id": 437626,
+            "original_language": "en",
+            "original_title": "Stockholm",
+            "overview": "Based on the extraordinary true story of the European city’s 1973 bank heist and hostage crisis that was documented in the 1974 New Yorker article “The Bank Drama” by Daniel Lang. The events grasped the world’s attention when the hostages bonded with their captors and turned against the authorities, giving rise to the psychological phenomenon known as “Stockholm Syndrome.”",
+            "poster_path": "/ko3AS33BLNEBcp1CO4FvdRltTxr.jpg",
+            "release_date": "2019-04-12",
+            "title": "Stockholm",
+            "video": false,
+            "vote_average": 7,
+            "vote_count": 6,
+            "popularity": 5.013
+        },
+        {
+            "id": 299534,
+            "video": false,
+            "vote_count": 6246,
+            "vote_average": 8.5,
+            "title": "Avengers: Endgame",
+            "release_date": "2019-04-24",
+            "original_language": "en",
+            "original_title": "Avengers: Endgame",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+            "adult": false,
+            "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+            "poster_path": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+            "popularity": 203.02
+        },
+        {
+            "id": 420817,
+            "video": false,
+            "vote_count": 779,
+            "vote_average": 7.2,
+            "title": "Aladdin",
+            "release_date": "2019-05-22",
+            "original_language": "en",
+            "original_title": "Aladdin",
+            "genre_ids": [
+                12,
+                35,
+                14,
+                10749,
+                10751
+            ],
+            "backdrop_path": "/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+            "adult": false,
+            "overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.",
+            "poster_path": "/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg",
+            "popularity": 476.676
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mzRJpkWPjXdXak0WCc8ZxVH4hug.jpg",
+            "genre_ids": [
+                28,
+                878,
+                53
+            ],
+            "id": 373571,
+            "original_language": "en",
+            "original_title": "Godzilla: King of the Monsters",
+            "overview": "The new story follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species—thought to be mere myths—rise again, they all vie for supremacy, leaving humanity’s very existence hanging in the balance.",
+            "poster_path": "/pU3bnutJU91u3b4IeRPQTOP8jhV.jpg",
+            "release_date": "2019-05-29",
+            "title": "Godzilla: King of the Monsters",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 64,
+            "popularity": 143.161
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lFwykSz3Ykj1Q3JXJURnGUTNf1o.jpg",
+            "genre_ids": [
+                16,
+                10751,
+                12
+            ],
+            "id": 166428,
+            "original_language": "en",
+            "original_title": "How to Train Your Dragon: The Hidden World",
+            "overview": "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.",
+            "poster_path": "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg",
+            "release_date": "2019-01-03",
+            "title": "How to Train Your Dragon: The Hidden World",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 1931,
+            "popularity": 91.422
+        },
+        {
+            "original_name": "The Hot Zone",
+            "id": 86799,
+            "name": "The Hot Zone",
+            "vote_count": 1,
+            "vote_average": 10,
+            "first_air_date": "2019-05-27",
+            "poster_path": "/73w8Q1aY0XkRJyyy43sZ02tTcra.jpg",
+            "genre_ids": [
+                18
+            ],
+            "original_language": "en",
+            "backdrop_path": "/npCaBQi941PRhHlUEWPws4qi10U.jpg",
+            "overview": "Heroic U.S. Army scientist Dr. Nancy Jaax, working with a secret military specialized team, puts her life on the line to head off an Ebola outbreak before it spread to the human population.",
+            "origin_country": [
+                "US"
+            ],
+            "popularity": 80.58
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wsjcWHezujlzhBpED3KXq3JkxmB.jpg",
+            "genre_ids": [
+                878,
+                12,
+                28,
+                35
+            ],
+            "id": 531306,
+            "original_language": "en",
+            "original_title": "Rim of the World",
+            "overview": "Stranded at a summer camp when aliens attack the planet, four teens with nothing in common embark on a perilous mission to save the world.",
+            "poster_path": "/yhzTeZU5OULn3ePGF58Rc5oIocZ.jpg",
+            "release_date": "2019-05-24",
+            "title": "Rim of the World",
+            "video": false,
+            "vote_average": 5.7,
+            "vote_count": 131,
+            "popularity": 61.303
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/AiG8iWpFtFSXAdhStWu6qBaqmv9.jpg",
+            "genre_ids": [
+                53,
+                27
+            ],
+            "id": 458723,
+            "original_language": "en",
+            "original_title": "Us",
+            "overview": "Husband and wife Gabe and Adelaide Wilson take their kids to their beach house expecting to unplug and unwind with friends. But as night descends, their serenity turns to tension and chaos when some shocking visitors arrive uninvited.",
+            "poster_path": "/ux2dU1jQ2ACIMShzB3yP93Udpzc.jpg",
+            "release_date": "2019-03-14",
+            "title": "Us",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 1526,
+            "popularity": 108.03
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6hfmHRaZNKzazyDDLli5CbT6L8H.jpg",
+            "genre_ids": [
+                99
+            ],
+            "id": 591278,
+            "original_language": "en",
+            "original_title": "Game of Thrones: The Last Watch",
+            "overview": "Post-finale feature-length documentary about the making-of the hit HBO TV show.",
+            "poster_path": "/326nGnxFNGN1zDXvKU9qjzLhcVH.jpg",
+            "release_date": "2019-04-27",
+            "title": "Game of Thrones: The Last Watch",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 35,
+            "popularity": 35.609
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2OKpu0Z6zD4meBQ8bYZb4FtF1bi.jpg",
+            "genre_ids": [
+                53,
+                27,
+                9648
+            ],
+            "id": 480414,
+            "original_language": "en",
+            "original_title": "The Curse of La Llorona",
+            "overview": "A social worker dealing with the disappearance of two children fears for her own family after beginning the investigation.",
+            "poster_path": "/jhZlXSnFUpNiLAek9EkPrtLEWQI.jpg",
+            "release_date": "2019-04-17",
+            "title": "The Curse of La Llorona",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 307,
+            "popularity": 78.968
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/99LvuMDXJ6A6I7FW61OvjDjvvAx.jpg",
+            "genre_ids": [
+                18,
+                27,
+                53
+            ],
+            "id": 529962,
+            "original_language": "en",
+            "original_title": "The Perfection",
+            "overview": "When troubled musical prodigy Charlotte seeks out Elizabeth, the new star pupil of her former school, the encounter sends both musicians down a sinister path with shocking consequences.",
+            "poster_path": "/tPDe68PDsgIGMs6wdJLtcwVVxA7.jpg",
+            "release_date": "2018-09-20",
+            "title": "The Perfection",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 128,
+            "popularity": 37.608
+        },
+        {
+            "original_name": "The InBetween",
+            "id": 81947,
+            "name": "The InBetween",
+            "vote_count": 1,
+            "vote_average": 7,
+            "first_air_date": "2019-05-29",
+            "poster_path": "/j4aKlHjHuLqZiBlYLCEkXKlgakn.jpg",
+            "genre_ids": [
+                18,
+                10765
+            ],
+            "original_language": "en",
+            "backdrop_path": "/gH924Hhqk5Mk9guQfxVJsNvcMSq.jpg",
+            "overview": "Cassie Bishop was born with a gift, though she may call it a curse. She can see and communicate with the dead, helping them with their unresolved problems … whether she likes it or not. When her longtime friend Det. Tom Hackett and his new partner, former FBI Agent Damien Asante, need help solving a darkly puzzling murder, Cassie agrees to use her abilities.",
+            "origin_country": [
+                "US"
+            ],
+            "popularity": 59.153
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/v99NrmuSYn4HGwwpHWEkMVSeAL3.jpg",
+            "genre_ids": [
+                27,
+                9648,
+                53,
+                878,
+                35
+            ],
+            "id": 512196,
+            "original_language": "en",
+            "original_title": "Happy Death Day 2U",
+            "overview": "Collegian Tree Gelbman wakes up in horror to learn that she's stuck in a parallel universe. Her boyfriend Carter is now with someone else, and her friends and fellow students seem to be completely different versions of themselves. When Tree discovers that Carter's roommate has been altering time, she finds herself once again the target of a masked killer. When the psychopath starts to go after her inner circle, Tree soon realizes that she must die over and over again to save everyone.",
+            "poster_path": "/4tdnePOkOOzwuGPEOAHp8UA4vqx.jpg",
+            "release_date": "2019-02-13",
+            "title": "Happy Death Day 2U",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 846,
+            "popularity": 41.77
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 297802,
+            "original_language": "en",
+            "original_title": "Aquaman",
+            "overview": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne.",
+            "poster_path": "/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg",
+            "release_date": "2018-12-07",
+            "title": "Aquaman",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 6040,
+            "popularity": 52.07
+        },
+        {
+            "original_name": "The 100",
+            "id": 48866,
+            "name": "The 100",
+            "vote_count": 1526,
+            "vote_average": 6.5,
+            "first_air_date": "2014-03-19",
+            "poster_path": "/wBzNjurA8ijJPF21Ggs9nbviIzi.jpg",
+            "genre_ids": [
+                18,
+                10765
+            ],
+            "original_language": "en",
+            "backdrop_path": "/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg",
+            "overview": "100 years in the future, when the Earth has been abandoned due to radioactivity, the last surviving humans live on an ark orbiting the planet — but the ark won't last forever. So the repressive regime picks 100 expendable juvenile delinquents to send down to Earth to see if the planet is still habitable.",
+            "origin_country": [
+                "US"
+            ],
+            "popularity": 170.622
+        }
+    ],
+    "total_pages": 1000,
+    "total_results": 20000
+}
