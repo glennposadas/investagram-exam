@@ -10,8 +10,10 @@ import Moya
 
 public let deviceId = UIDevice.current.identifierForVendor!.uuidString
 
-public let baseURLStringDEV = "https://lemi.travel"
-public let apiVersionDEV = "/api/v5"
+public let baseURLStringDEV = "https://api.themoviedb.org"
+public let apiVersionDEV = "/3"
+
+public let baseImagePath = "https://image.tmdb.org/t/p"
 
 /// Returns the base url of the API based on the LLFEnv.
 public var baseURLString: String {

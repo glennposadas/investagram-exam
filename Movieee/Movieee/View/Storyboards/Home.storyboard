@@ -110,6 +110,13 @@
                                         <constraint firstItem="zUO-ZY-yyA" firstAttribute="leading" secondItem="rMI-nJ-6d1" secondAttribute="leading" constant="16" id="yoI-9h-Qns"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView_Banner" destination="csb-An-szG" id="XYW-t9-kki"/>
+                                    <outlet property="label_ApprovalRate" destination="chk-XY-OtW" id="Wi0-3C-IJC"/>
+                                    <outlet property="label_Date" destination="jmq-CJ-uXN" id="Nkg-bK-XD3"/>
+                                    <outlet property="label_Overview" destination="3XL-UN-hSr" id="cps-qm-Fmc"/>
+                                    <outlet property="label_Title" destination="6Gn-qG-wFS" id="50r-ce-gnR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

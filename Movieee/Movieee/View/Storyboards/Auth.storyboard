@@ -12,7 +12,7 @@
         <!--Log In-->
         <scene sceneID="JEM-Cc-gRP">
             <objects>
-                <tableViewController id="Vz1-HM-gOc" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LoginTableViewController" id="Vz1-HM-gOc" customClass="LoginTableViewController" customModule="Movieee" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" id="8sD-JZ-lkB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,17 +27,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I01-nb-cU4">
-                                                    <rect key="frame" x="16" y="19" width="80" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="ZEP-OW-Y56"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-zh-CZv">
-                                                    <rect key="frame" x="103" y="8" width="295" height="43.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-zh-CZv">
+                                                    <rect key="frame" x="16" y="8" width="382" height="43.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
@@ -45,12 +36,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="w8T-zh-CZv" secondAttribute="bottom" constant="8" id="33J-AG-DoA"/>
-                                                <constraint firstItem="I01-nb-cU4" firstAttribute="top" secondItem="YJp-xc-4Nm" secondAttribute="top" constant="19" id="eYV-8S-1Fz"/>
+                                                <constraint firstItem="w8T-zh-CZv" firstAttribute="leading" secondItem="YJp-xc-4Nm" secondAttribute="leading" constant="16" id="bPA-3O-6fn"/>
                                                 <constraint firstItem="w8T-zh-CZv" firstAttribute="top" secondItem="YJp-xc-4Nm" secondAttribute="top" constant="8" id="lbl-hc-IyA"/>
                                                 <constraint firstAttribute="trailing" secondItem="w8T-zh-CZv" secondAttribute="trailing" constant="16" id="vWk-JY-pvJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="I01-nb-cU4" secondAttribute="bottom" constant="19.5" id="wlC-qf-L5c"/>
-                                                <constraint firstItem="I01-nb-cU4" firstAttribute="leading" secondItem="YJp-xc-4Nm" secondAttribute="leading" constant="16" id="yjI-UJ-3lW"/>
-                                                <constraint firstItem="w8T-zh-CZv" firstAttribute="leading" secondItem="I01-nb-cU4" secondAttribute="trailing" constant="7" id="zDd-l1-WbY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -61,30 +49,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-n2-xX5">
-                                                    <rect key="frame" x="16" y="19" width="80" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="nV6-FI-jea"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-9E-bov">
-                                                    <rect key="frame" x="103" y="8" width="295" height="43.5"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-9E-bov">
+                                                    <rect key="frame" x="16" y="8" width="382" height="43.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="uCb-9E-bov" firstAttribute="leading" secondItem="9PU-VU-Mh7" secondAttribute="leading" constant="16" id="67G-hg-dq9"/>
                                                 <constraint firstAttribute="trailing" secondItem="uCb-9E-bov" secondAttribute="trailing" constant="16" id="PKG-3J-6Kw"/>
-                                                <constraint firstAttribute="bottom" secondItem="iGI-n2-xX5" secondAttribute="bottom" constant="19.5" id="SnY-a3-wrI"/>
-                                                <constraint firstItem="iGI-n2-xX5" firstAttribute="leading" secondItem="9PU-VU-Mh7" secondAttribute="leading" constant="16" id="aYY-Dd-y7C"/>
                                                 <constraint firstAttribute="bottom" secondItem="uCb-9E-bov" secondAttribute="bottom" constant="8" id="dfy-W3-PP7"/>
                                                 <constraint firstItem="uCb-9E-bov" firstAttribute="top" secondItem="9PU-VU-Mh7" secondAttribute="top" constant="8" id="h72-GG-fMR"/>
-                                                <constraint firstItem="uCb-9E-bov" firstAttribute="leading" secondItem="iGI-n2-xX5" secondAttribute="trailing" constant="7" id="i5a-1A-7Zw"/>
-                                                <constraint firstItem="iGI-n2-xX5" firstAttribute="top" secondItem="9PU-VU-Mh7" secondAttribute="top" constant="19" id="zXR-i1-Ih0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -103,6 +79,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.45098039215686275" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="LOG IN"/>
+                                                    <connections>
+                                                        <action selector="login:" destination="Vz1-HM-gOc" eventType="touchUpInside" id="hmU-v1-4wR"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -122,6 +101,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Log In" id="SSQ-di-Mec"/>
+                    <connections>
+                        <outlet property="textField_Email" destination="w8T-zh-CZv" id="e5X-Mz-CwL"/>
+                        <outlet property="textField_Password" destination="uCb-9E-bov" id="QVl-go-9Rg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujw-H8-OMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

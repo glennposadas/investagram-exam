@@ -12,11 +12,11 @@ class MovieTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     
-    @IBOutlet weak var view_LabelContainer: BleedingView!
     @IBOutlet weak var imageView_Banner: UIImageView!
     @IBOutlet weak var label_Title: UILabel!
     @IBOutlet weak var label_Date: UILabel!
     @IBOutlet weak var label_ApprovalRate: UILabel!
+    @IBOutlet weak var label_Overview: UILabel!
     
     // MARK: - Functions
     
