@@ -37,6 +37,11 @@
 		45DE6BDF22A2D72400411BB5 /* UIView+Movieee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */; };
 		45DE6BE122A2DBBA00411BB5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */; };
 		45DE6BE322A2E1B400411BB5 /* UISearchBar+Movieee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BE222A2E1B400411BB5 /* UISearchBar+Movieee.swift */; };
+		45DE6BE722A3034500411BB5 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DE6BE622A3034500411BB5 /* Root.storyboard */; };
+		45DE6BEA22A303BB00411BB5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BE922A303BB00411BB5 /* RootViewController.swift */; };
+		45DE6BEC22A3094700411BB5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BEB22A3094700411BB5 /* AuthService.swift */; };
+		45DE6BEF22A30AD700411BB5 /* MVDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BEE22A30AD700411BB5 /* MVDefaults.swift */; };
+		45DE6BF122A30D8100411BB5 /* APIManager+AuthCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BF022A30D8100411BB5 /* APIManager+AuthCalls.swift */; };
 		95786B357D920A1BBE58C66F /* Pods_Movieee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB7DE35950667089F33560A /* Pods_Movieee.framework */; };
 		B75682878B2B76DA9BFE3C43 /* Pods_MovieeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D65414AC64663C7035B64D5 /* Pods_MovieeeTests.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +103,11 @@
 		45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Movieee.swift"; sourceTree = "<group>"; };
 		45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		45DE6BE222A2E1B400411BB5 /* UISearchBar+Movieee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Movieee.swift"; sourceTree = "<group>"; };
+		45DE6BE622A3034500411BB5 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		45DE6BE922A303BB00411BB5 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		45DE6BEB22A3094700411BB5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		45DE6BEE22A30AD700411BB5 /* MVDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVDefaults.swift; sourceTree = "<group>"; };
+		45DE6BF022A30D8100411BB5 /* APIManager+AuthCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+AuthCalls.swift"; sourceTree = "<group>"; };
 		5F3594B7F2709E5A1D8A0B69 /* Pods-MovieeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieeeTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieeeTests/Pods-MovieeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81606ABF9732F33EE9E01D4C /* Pods-Movieee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movieee.release.xcconfig"; path = "Target Support Files/Pods-Movieee/Pods-Movieee.release.xcconfig"; sourceTree = "<group>"; };
 		DCB7DE35950667089F33560A /* Pods_Movieee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movieee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,10 +231,9 @@
 		4575DFD122A170AA00507908 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4575DFD222A170AA00507908 /* APIManagers */,
 				4575DFD522A170AA00507908 /* CoreService.swift */,
+				4575DFD222A170AA00507908 /* APIManagers */,
 				4575DFD622A170AA00507908 /* CustomEncoders */,
-				4575DFD922A170AA00507908 /* CustomServerTrustPoliceManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -232,8 +241,10 @@
 		4575DFD222A170AA00507908 /* APIManagers */ = {
 			isa = PBXGroup;
 			children = (
+				4575DFD922A170AA00507908 /* CustomServerTrustPoliceManager.swift */,
 				4575DFD322A170AA00507908 /* APIManager.swift */,
 				4575DFD422A170AA00507908 /* APIManager+SearchCalls.swift */,
+				45DE6BF022A30D8100411BB5 /* APIManager+AuthCalls.swift */,
 			);
 			path = APIManagers;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 				45B9C23A229F10E000B837D3 /* Auth.storyboard */,
 				45B9C24922A008FE00B837D3 /* Home.storyboard */,
 				45529E65229F0FB20091404E /* LaunchScreen.storyboard */,
+				45DE6BE622A3034500411BB5 /* Root.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -269,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				4575DFC022A164CE00507908 /* Base */,
+				45DE6BE822A3039F00411BB5 /* Root */,
 				45B9C24522A0020000B837D3 /* Auth */,
 				45B9C24622A0020400B837D3 /* Home */,
 				45B9C24722A0022E00B837D3 /* Watchlist */,
@@ -299,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				4575DFD122A170AA00507908 /* Core */,
+				45DE6BED22A3095400411BB5 /* Auth */,
 				4575DFDA22A170AA00507908 /* Home */,
 				4575DFCF22A170AA00507908 /* StubbedResponses */,
 			);
@@ -309,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				45B9C243229FE43800B837D3 /* MVKeys.swift */,
+				45DE6BEE22A30AD700411BB5 /* MVDefaults.swift */,
 				45DE6BD722A2002500411BB5 /* String+Movieee.swift */,
 				45DE6BDC22A2CE3200411BB5 /* UITableViewCell+Movieee.swift */,
 				45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */,
@@ -383,6 +398,22 @@
 				45DE6BD522A1FDEB00411BB5 /* ErrorResult.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		45DE6BE822A3039F00411BB5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				45DE6BE922A303BB00411BB5 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		45DE6BED22A3095400411BB5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				45DE6BEB22A3094700411BB5 /* AuthService.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		7F9F8D0F7CFD4C08BC5ACE61 /* Pods */ = {
@@ -505,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DE6BE722A3034500411BB5 /* Root.storyboard in Resources */,
 				45B9C23B229F10E000B837D3 /* Auth.storyboard in Resources */,
 				45529E67229F0FB20091404E /* LaunchScreen.storyboard in Resources */,
 				4575DFDC22A170AA00507908 /* MovieResult.json in Resources */,
@@ -616,12 +648,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4575DFCE22A16D4B00507908 /* Movie+Helper.swift in Sources */,
+				45DE6BF122A30D8100411BB5 /* APIManager+AuthCalls.swift in Sources */,
 				45DE6BE122A2DBBA00411BB5 /* HomeViewModel.swift in Sources */,
 				4575DFCC22A1683E00507908 /* MovieResult.swift in Sources */,
 				4575DFE022A170AA00507908 /* JSONArrayEncoding.swift in Sources */,
 				45DE6BDF22A2D72400411BB5 /* UIView+Movieee.swift in Sources */,
 				4575DFC722A1659300507908 /* MovieTableViewCell.swift in Sources */,
 				4575DFDF22A170AA00507908 /* CoreService.swift in Sources */,
+				45DE6BEC22A3094700411BB5 /* AuthService.swift in Sources */,
 				4575DFDD22A170AA00507908 /* APIManager.swift in Sources */,
 				4575DFE222A170AA00507908 /* CustomServerTrustPoliceManager.swift in Sources */,
 				4575DFC422A1655300507908 /* HomeTableViewController.swift in Sources */,
@@ -629,12 +663,14 @@
 				4575DFE522A17C9E00507908 /* LoginTableViewController.swift in Sources */,
 				45DE6BDD22A2CE3200411BB5 /* UITableViewCell+Movieee.swift in Sources */,
 				45DE6BE322A2E1B400411BB5 /* UISearchBar+Movieee.swift in Sources */,
+				45DE6BEA22A303BB00411BB5 /* RootViewController.swift in Sources */,
 				45529E5D229F0FB20091404E /* AppDelegate.swift in Sources */,
 				4575DFCB22A1683E00507908 /* Movie.swift in Sources */,
 				4575DFE122A170AA00507908 /* NoBracketsEncoding.swift in Sources */,
 				45DE6BD322A1FD9E00411BB5 /* TokenResult.swift in Sources */,
 				4575DFE322A170AA00507908 /* SearchService.swift in Sources */,
 				45DE6BD622A1FDEB00411BB5 /* ErrorResult.swift in Sources */,
+				45DE6BEF22A30AD700411BB5 /* MVDefaults.swift in Sources */,
 				45DE6BD822A2002500411BB5 /* String+Movieee.swift in Sources */,
 				4575DFDE22A170AA00507908 /* APIManager+SearchCalls.swift in Sources */,
 				4575DFC222A164E100507908 /* BleedingView.swift in Sources */,

@@ -25,6 +25,7 @@ class APIManager {
                     return
                 }
 
+                
                 onError?("An error has occured.", moyaResponse.statusCode, "123")
                 
             case let .failure(error):
