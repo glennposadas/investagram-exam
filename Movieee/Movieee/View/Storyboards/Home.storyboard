@@ -112,6 +112,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageView_Banner" destination="csb-An-szG" id="XYW-t9-kki"/>
+                                    <outlet property="imageView_Poster" destination="csb-An-szG" id="lAo-tN-v1E"/>
                                     <outlet property="label_ApprovalRate" destination="chk-XY-OtW" id="Wi0-3C-IJC"/>
                                     <outlet property="label_Date" destination="jmq-CJ-uXN" id="Nkg-bK-XD3"/>
                                     <outlet property="label_Overview" destination="3XL-UN-hSr" id="cps-qm-Fmc"/>

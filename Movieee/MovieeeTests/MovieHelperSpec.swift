@@ -37,6 +37,19 @@ class MovieeeSpec: QuickSpec {
                         movie?.releaseDatePresentable
                         }.to(equal("March 6, 2019"))
                 }
+                
+                it("tests the approval rate presentable of the first index movie object.") {
+                    
+                    let movie = movieResult?.movies?.first
+                    
+                    // Assert
+                    expect(movie).notTo(beNil())
+                    
+                    // Assert
+                    expect {
+                        movie?.approvalRatePresentable
+                        }.to(equal("71%"))
+                }
             }
         }
     }

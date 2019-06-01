@@ -35,6 +35,21 @@ extension Movie {
         }
     }
     
+    /// The presentable approval rate
+    var approvalRatePresentable: String {
+        get {
+            let approvalRate: Int = Int((self.voteAverage ?? 0) * 10.0)
+            return "\(approvalRate)%"
+        }
+    }
+
+    /// The presentabl overview
+    var overviewPresentable: String {
+        get {
+            return self.overview ?? ""
+        }
+    }
+
     /// Kingfisher's resource object for downloading the poster of the movie. Vertical Rectangle image
     /// Url is encoded.
     var posterResource: Resource? {
