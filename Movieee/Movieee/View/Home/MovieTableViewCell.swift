@@ -13,6 +13,7 @@ class MovieTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView_Poster: UIImageView!
     @IBOutlet weak var label_Title: UILabel!
     @IBOutlet weak var label_Date: UILabel!
@@ -39,13 +40,26 @@ class MovieTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        // Turn off selection animation
+        self.selectionStyle = .none
+        // Remove separator
+        self.removeSeparator()
+        // Add shadow
+        self.cardView.setupLayer(cornerRadius: 0)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0,
+            usingSpringWithDamping: 0.9,
+            initialSpringVelocity: 5,
+            animations: {
+                let value: CGFloat = self.isHighlighted ? 0.9 : 1.0
+                self.cardView.transform = CGAffineTransform(scaleX: value, y: value)
+        }, completion: nil)
     }
-
 }

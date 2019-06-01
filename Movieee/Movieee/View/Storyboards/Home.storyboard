@@ -37,13 +37,13 @@
                                             <rect key="frame" x="16" y="16" width="382" height="167.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="csb-An-szG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="167.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="167.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="OLw-hC-iZP"/>
+                                                        <constraint firstAttribute="width" constant="115" id="OLw-hC-iZP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6ej-s5-WJa" userLabel="TopLabelStackView">
-                                                    <rect key="frame" x="148" y="16" width="226" height="38"/>
+                                                    <rect key="frame" x="123" y="16" width="251" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gn-qG-wFS">
                                                             <rect key="frame" x="0.0" y="0.0" width="35.5" height="17"/>
@@ -63,20 +63,20 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_star" translatesAutoresizingMaskIntoConstraints="NO" id="BI0-FI-cH4">
-                                                    <rect key="frame" x="148" y="61.5" width="23" height="23"/>
+                                                    <rect key="frame" x="123" y="61.5" width="23" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="23" id="Klg-6s-YZR"/>
                                                         <constraint firstAttribute="height" constant="23" id="WLB-EF-Qcy"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-XY-OtW">
-                                                    <rect key="frame" x="184" y="64.5" width="29.5" height="17"/>
+                                                    <rect key="frame" x="150" y="64.5" width="29.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XL-UN-hSr">
-                                                    <rect key="frame" x="148" y="92.5" width="226" height="67"/>
+                                                    <rect key="frame" x="123" y="92.5" width="251" height="67"/>
                                                     <string key="text">The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -85,7 +85,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="chk-XY-OtW" firstAttribute="leading" secondItem="BI0-FI-cH4" secondAttribute="trailing" constant="13" id="8yX-if-JYq"/>
+                                                <constraint firstItem="chk-XY-OtW" firstAttribute="leading" secondItem="BI0-FI-cH4" secondAttribute="trailing" constant="4" id="8yX-if-JYq"/>
                                                 <constraint firstItem="6ej-s5-WJa" firstAttribute="leading" secondItem="csb-An-szG" secondAttribute="trailing" constant="8" id="Don-i0-JXe"/>
                                                 <constraint firstItem="3XL-UN-hSr" firstAttribute="bottom" secondItem="csb-An-szG" secondAttribute="bottom" constant="-8" id="EQy-Ca-mhk"/>
                                                 <constraint firstAttribute="bottom" secondItem="csb-An-szG" secondAttribute="bottom" id="I80-6O-Gx3"/>
@@ -111,7 +111,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView_Banner" destination="csb-An-szG" id="XYW-t9-kki"/>
+                                    <outlet property="cardView" destination="zUO-ZY-yyA" id="d17-25-faT"/>
                                     <outlet property="imageView_Poster" destination="csb-An-szG" id="lAo-tN-v1E"/>
                                     <outlet property="label_ApprovalRate" destination="chk-XY-OtW" id="Wi0-3C-IJC"/>
                                     <outlet property="label_Date" destination="jmq-CJ-uXN" id="Nkg-bK-XD3"/>

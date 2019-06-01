@@ -14,14 +14,14 @@ extension Movie {
     /// Presentable movie title
     var titlePresentable: String {
         get {
-            return self.title ?? ""
+            return self.title ?? (self.originalName ?? "Unknown Title")
         }
     }
     
     /// Presentable name of the city.
     var releaseDatePresentable: String {
         get {
-            let dateString = self.releaseDate ?? ""
+            let dateString = self.releaseDate ?? (self.firstAirDate ?? "")
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             
@@ -31,7 +31,7 @@ extension Movie {
                 return formattedStringDate
             }
             
-            return self.releaseDate ?? "Unknown name"
+            return self.releaseDate ?? "Unknown Date"
         }
     }
     

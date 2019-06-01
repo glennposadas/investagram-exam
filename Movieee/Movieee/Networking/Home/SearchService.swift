@@ -15,8 +15,8 @@ let searchServiceProvider = MoyaProvider<SearchService>(
 )
 
 enum SearchService {
-    /// Search for cities
-    case search(query: String)
+    /// Get trending movies
+    case getTrendingToday(page: Int)
 }
 
 // MARK: - TargetType Protocol Implementationm
@@ -28,28 +28,29 @@ extension SearchService: TargetType {
     
     var path: String {
         switch self {
-        case .search: return "/cities"
+        case .getTrendingToday: return "/trending/all/day"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .search: return .get
+        case .getTrendingToday: return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .search: return stubbedResponse("Cities")
+        case .getTrendingToday: return stubbedResponse("MovieResult")
         }
     }
 
     var task: Task {
         switch self {
-        case let .search(query):
+        case let .getTrendingToday(page):
             return .requestParameters(
                 parameters: [
-                    "q": query
+                    "api_key": MVKeys.tmDB.dev,
+                    "page": page
                 ], encoding: URLEncoding.default
             )
         }

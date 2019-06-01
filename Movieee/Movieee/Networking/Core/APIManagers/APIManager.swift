@@ -11,7 +11,7 @@ import Result
 
 typealias SuccessCallBack = ((_ data: Data) -> Void)?
 typealias EmptySuccessCallBack = (() -> (Void))?
-typealias ErrorCallBack = ((_ errorMsg: String, _ networkErrorCode: Int, _ llfErrorCode: String) -> Void)?
+typealias ErrorCallBack = ((_ errorMessage: String, _ networkErrorCode: Int, _ llfErrorCode: String) -> Void)?
 
 /// The manager for all API Calls.
 class APIManager {
