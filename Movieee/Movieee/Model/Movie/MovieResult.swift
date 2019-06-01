@@ -11,7 +11,7 @@ import Foundation
 struct MovieResult: Codable {
     
     let movies : [Movie]?
-    let page : Int?
+    var page : Int?
     let totalPages : Int?
     let totalResults : Int?
     
@@ -30,4 +30,11 @@ struct MovieResult: Codable {
         totalResults = try values.decodeIfPresent(Int.self, forKey: .totalResults)
     }
     
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(movies, forKey: .movies)
+        try container.encode(page, forKey: .page)
+        try container.encode(totalPages, forKey: .totalPages)
+        try container.encode(totalResults, forKey: .totalResults)
+    }
 }

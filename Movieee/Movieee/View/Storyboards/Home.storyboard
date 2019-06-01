@@ -17,17 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="mmd-6p-dTa">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="yWs-O4-BTE" id="CJW-Rd-Ofs"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="200" id="J46-zg-nc5" customClass="MovieTableViewCell" customModule="Movieee" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J46-zg-nc5" id="rMI-nJ-6d1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
@@ -134,7 +126,6 @@
                 <searchDisplayController id="l39-NG-mpM">
                     <connections>
                         <outlet property="delegate" destination="yWs-O4-BTE" id="zEm-s4-UYP"/>
-                        <outlet property="searchBar" destination="mmd-6p-dTa" id="Y8q-b9-HBd"/>
                         <outlet property="searchContentsController" destination="yWs-O4-BTE" id="GNP-Hi-hxz"/>
                         <outlet property="searchResultsDataSource" destination="yWs-O4-BTE" id="swh-UR-E3Z"/>
                         <outlet property="searchResultsDelegate" destination="yWs-O4-BTE" id="41z-7K-0aW"/>

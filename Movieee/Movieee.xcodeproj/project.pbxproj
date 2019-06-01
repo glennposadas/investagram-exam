@@ -35,6 +35,8 @@
 		45DE6BDB22A2029700411BB5 /* MovieHelperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BDA22A2029700411BB5 /* MovieHelperSpec.swift */; };
 		45DE6BDD22A2CE3200411BB5 /* UITableViewCell+Movieee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BDC22A2CE3200411BB5 /* UITableViewCell+Movieee.swift */; };
 		45DE6BDF22A2D72400411BB5 /* UIView+Movieee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */; };
+		45DE6BE122A2DBBA00411BB5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */; };
+		45DE6BE322A2E1B400411BB5 /* UISearchBar+Movieee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DE6BE222A2E1B400411BB5 /* UISearchBar+Movieee.swift */; };
 		95786B357D920A1BBE58C66F /* Pods_Movieee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB7DE35950667089F33560A /* Pods_Movieee.framework */; };
 		B75682878B2B76DA9BFE3C43 /* Pods_MovieeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D65414AC64663C7035B64D5 /* Pods_MovieeeTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		45DE6BDA22A2029700411BB5 /* MovieHelperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHelperSpec.swift; sourceTree = "<group>"; };
 		45DE6BDC22A2CE3200411BB5 /* UITableViewCell+Movieee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Movieee.swift"; sourceTree = "<group>"; };
 		45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Movieee.swift"; sourceTree = "<group>"; };
+		45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		45DE6BE222A2E1B400411BB5 /* UISearchBar+Movieee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Movieee.swift"; sourceTree = "<group>"; };
 		5F3594B7F2709E5A1D8A0B69 /* Pods-MovieeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieeeTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieeeTests/Pods-MovieeeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81606ABF9732F33EE9E01D4C /* Pods-Movieee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movieee.release.xcconfig"; path = "Target Support Files/Pods-Movieee/Pods-Movieee.release.xcconfig"; sourceTree = "<group>"; };
 		DCB7DE35950667089F33560A /* Pods_Movieee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movieee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +290,7 @@
 		45B9C23F229FD80600B837D3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				45DE6BD722A2002500411BB5 /* String+Movieee.swift */,
 				45DE6BDC22A2CE3200411BB5 /* UITableViewCell+Movieee.swift */,
 				45DE6BDE22A2D72400411BB5 /* UIView+Movieee.swift */,
+				45DE6BE222A2E1B400411BB5 /* UISearchBar+Movieee.swift */,
 			);
 			path = Utilitiies;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4575DFCE22A16D4B00507908 /* Movie+Helper.swift in Sources */,
+				45DE6BE122A2DBBA00411BB5 /* HomeViewModel.swift in Sources */,
 				4575DFCC22A1683E00507908 /* MovieResult.swift in Sources */,
 				4575DFE022A170AA00507908 /* JSONArrayEncoding.swift in Sources */,
 				45DE6BDF22A2D72400411BB5 /* UIView+Movieee.swift in Sources */,
@@ -621,6 +628,7 @@
 				45B9C244229FE43800B837D3 /* MVKeys.swift in Sources */,
 				4575DFE522A17C9E00507908 /* LoginTableViewController.swift in Sources */,
 				45DE6BDD22A2CE3200411BB5 /* UITableViewCell+Movieee.swift in Sources */,
+				45DE6BE322A2E1B400411BB5 /* UISearchBar+Movieee.swift in Sources */,
 				45529E5D229F0FB20091404E /* AppDelegate.swift in Sources */,
 				4575DFCB22A1683E00507908 /* Movie.swift in Sources */,
 				4575DFE122A170AA00507908 /* NoBracketsEncoding.swift in Sources */,
@@ -800,7 +808,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE4YFXSB23;
 				INFOPLIST_FILE = Movieee/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -820,7 +828,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE4YFXSB23;
 				INFOPLIST_FILE = Movieee/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
