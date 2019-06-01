@@ -22,6 +22,20 @@ class HomeViewModel: NSObject {
     
     weak var delegate: HomeDelegate?
     
+    private let disposeBag = DisposeBag()
+    
+    var userIsSearching = BehaviorRelay<Bool>(value: false)
+    
+    var query = BehaviorRelay<String>(value: "")
+    var lastQuery = BehaviorRelay<String>(value: "")
+    var movieResultForSearch = BehaviorRelay<MovieResult?>(value: nil)
+    var moviesForSearch = [Movie]()
+    
+    var lastPageRequestedForSearch = -1
+    var currentPageForSearch: Int = 1
+    var lastPageForSearch: Int = 100
+    var lastPageReachedForSearch: Bool = false
+    
     var movieResult = BehaviorRelay<MovieResult?>(value: nil)
     var movies = [Movie]()
     
@@ -43,8 +57,45 @@ class HomeViewModel: NSObject {
         self.lastPageRequested = self.currentPage
         
         APIManager.SearchCalls.getTrendingToday(page: self.currentPage, onSuccess: { (movieResult) in
-            guard let movieResult = movieResult, let movies = movieResult.movies else { return }
+            self.handleMovieResult(movieResult)
             
+        }) { (errorMessage, _, _) in
+            // TODO: Handle errors.
+            print("Error: \(errorMessage)")
+        }
+    }
+    
+    func search(_ query: String) {
+        print("Searching: \(query) | Last Page Requested: \(self.lastPageRequestedForSearch)")
+        
+        if query != self.lastQuery.value {
+            self.resetForSearchProperties()
+        }
+        
+        APIManager.SearchCalls.search(query, page: self.currentPageForSearch, onSuccess: { (movieResult) in
+            self.handleMovieResult(movieResult)
+            self.lastQuery.accept(query)
+            
+        }) { (errorMessage, _, _) in
+            // TODO: Handle errors.
+            print("Error: \(errorMessage)")
+        }
+    }
+    
+    func handleMovieResult(_ movieResult: MovieResult?) {
+        guard let movieResult = movieResult, let movies = movieResult.movies else { return }
+
+        if self.userIsSearching.value {
+            self.currentPageForSearch = movieResult.page ?? 1
+            self.lastPageForSearch = (movieResult.totalPages ?? 1)
+            self.lastPageReachedForSearch = self.currentPageForSearch >= self.lastPageForSearch
+            
+            _ = movies.map {
+                self.moviesForSearch.append($0)
+            }
+            self.movieResultForSearch.accept(movieResult)
+            
+        } else {
             self.currentPage = movieResult.page ?? 1
             self.lastPage = (movieResult.totalPages ?? 1)
             self.lastPageReached = self.currentPage >= self.lastPage
@@ -53,10 +104,18 @@ class HomeViewModel: NSObject {
                 self.movies.append($0)
             }
             self.movieResult.accept(movieResult)
-        }) { (errorMessage, _, _) in
-            // TODO: Handle errors.
-            print("Error: \(errorMessage)")
         }
+    }
+    
+    func resetForSearchProperties() {
+        self.moviesForSearch.removeAll()
+        
+        self.lastPageRequestedForSearch = -1
+        self.currentPageForSearch = 1
+        self.lastPageForSearch = 100
+        self.lastPageReachedForSearch = false
+        
+        self.movieResultForSearch.accept(nil)
     }
     
     /// init
@@ -66,6 +125,19 @@ class HomeViewModel: NSObject {
         self.delegate = homeCnotroller
         
         self.getTrendingToday()
+        
+        weak var weakSelf = self
+        
+        // Observe query relay by user
+        self.query.subscribe(onNext: { newQuery in
+            weakSelf?.search(newQuery)
+        }).disposed(by: self.disposeBag)
+        
+        // Observe `userIsSearching` relay.
+        self.userIsSearching.subscribe(onNext: { isSearching in
+            weakSelf?.resetForSearchProperties()
+        }).disposed(by: self.disposeBag)
+
     }
 }
 
@@ -75,7 +147,7 @@ extension HomeViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        
+        let _ = self.userIsSearching.value ? self.moviesForSearch[indexPath.row] : self.movies[indexPath.row]
     }
 }
 
@@ -83,14 +155,14 @@ extension HomeViewModel: UITableViewDelegate {
 
 extension HomeViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let movie = self.movies[indexPath.row]
+        let movie = self.userIsSearching.value ? self.moviesForSearch[indexPath.row] : self.movies[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
         cell.setupCell(movie)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movies.count
+        return self.userIsSearching.value ? self.moviesForSearch.count: self.movies.count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -102,19 +174,24 @@ extension HomeViewModel: UITableViewDataSource {
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-            if self.movieResult.value?.page == self.movieResult.value?.totalPages {
+            if (self.movieResult.value?.page == self.movieResult.value?.totalPages)
+                || (self.movieResultForSearch.value?.page == self.movieResultForSearch.value?.totalPages) {
                 let transluscentView = UIView()
                 transluscentView.backgroundColor = .clear
                 tableView.tableFooterView = transluscentView
                 return
             }
             
-            // Reload new page.
-            
-            print("Reloading new page 🔔")
-            
-            self.currentPage = self.currentPage + 1
-            self.getTrendingToday()
+            if self.userIsSearching.value {
+                // Load new page
+                self.currentPageForSearch = self.currentPageForSearch + 1
+                self.search(self.query.value)
+            } else {
+                // Load new page
+                self.currentPage = self.currentPage + 1
+                self.getTrendingToday()
+
+            }
             
             tableView.tableFooterView = spinner
             tableView.tableFooterView?.isHidden = false

@@ -26,6 +26,15 @@ extension APIManager {
                 onSuccess(movieResult)
             }, onError: onError)
         }
+
+        /// Paginated search.
+        static func search(_ query: String, page: Int, onSuccess: @escaping MovieResultCallBack, onError: ErrorCallBack = nil) {
+            self.request(provider: searchServiceProvider, target: .search(query: query, page: page), onSuccess: { (data) in
+                let movieResult = try? JSONDecoder().decode(MovieResult.self, from: data)
+                onSuccess(movieResult)
+            }, onError: onError)
+
+        }
     }
 }
 

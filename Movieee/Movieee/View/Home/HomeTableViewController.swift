@@ -16,9 +16,10 @@ class HomeTableViewController: UITableViewController {
     
     var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    let searchController = UISearchController(searchResultsController: nil)
+
+    private lazy var searchController: UISearchController = {
+        return UISearchController(searchResultsController: nil)
+    }()
     
     // MARK: - Functions
     
@@ -31,20 +32,40 @@ class HomeTableViewController: UITableViewController {
         self.viewModel.movieResult.subscribe(onNext: { _ in
             weakSelf?.tableView.reloadData()
         }).disposed(by: self.disposeBag)
+        
+        self.viewModel.movieResultForSearch.subscribe(onNext: { _ in
+            weakSelf?.tableView.reloadData()
+        }).disposed(by: self.disposeBag)
+        
+        self.searchController.rx.didPresent.subscribe { _ in
+            weakSelf?.viewModel.userIsSearching.accept(true)
+        }.disposed(by: self.disposeBag)
+        
+        self.searchController.rx.didDismiss.subscribe { _ in
+            weakSelf?.viewModel.userIsSearching.accept(false)
+            }.disposed(by: self.disposeBag)
+        
+        self.searchController.searchBar.rx.text
+            .orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter { !$0.isEmpty }
+            .bind(to: self.viewModel.query)
+            .disposed(by: self.disposeBag)
     }
     
     private func setupUI() {
         // Setup tableView
         self.tableView.tableHeaderView = UIView()
         self.tableView.tableFooterView = UIView()
+        self.tableView.keyboardDismissMode = .interactive
         
         // Setup the Search Controller
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search Candies"
+        self.searchController.searchBar.placeholder = "Search For Movies"
         self.navigationItem.searchController = self.searchController
         self.definesPresentationContext = true
-        self.searchController.searchBar.delegate = self
     }
     
     // MARK: Overrides
@@ -64,20 +85,12 @@ extension HomeTableViewController: HomeDelegate {
     
 }
 
-// MARK: - UISearchBarDelegate
-
-extension HomeTableViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        
-    }
-}
-
 // MARK: - UISearchResultsUpdating
 
 extension HomeTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
+        /*let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+        self.viewModel.search(searchBar.text!)*/
     }
 }
