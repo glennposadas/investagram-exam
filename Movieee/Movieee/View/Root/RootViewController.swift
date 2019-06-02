@@ -8,11 +8,32 @@
 
 import UIKit
 
+/// The root screen that handles what flow should be started.
+/// TODO: Create RootVieWModel.
 class RootViewController: UIViewController {
     
-    // MARK: - Properties
-    
     // MARK: - Functions
+    
+    func startAuthFlow() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let loginNavigationController = storyboard_Auth.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
+            
+            UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
+                appDelegate.window?.rootViewController = loginNavigationController
+            }, completion: nil)
+        }
+    }
+    
+    func startHomeFlow() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
+            
+            UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
+                appDelegate.window?.rootViewController = homeNavigationController
+            }, completion: nil)
+        }
+    }
+    
     // MARK: Overrides
     
     override func viewDidAppear(_ animated: Bool) {
@@ -20,13 +41,7 @@ class RootViewController: UIViewController {
         
         // No request token, proceeed to auth flow.
         if MVDefaults.getObjectWithKey(.requestToken, type: String.self) == nil {
-            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                let loginNavigationController = storyboard_Auth.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
-                
-                UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
-                    appDelegate.window?.rootViewController = loginNavigationController
-                }, completion: nil)
-            }
+            self.startAuthFlow()
             return
         }
         
@@ -43,16 +58,15 @@ class RootViewController: UIViewController {
                 
                 if let _ = tokenResult {
                     // Success
-                    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                        let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
-                        
-                        UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
-                            appDelegate.window?.rootViewController = homeNavigationController
-                        }, completion: nil)
-                    }
+                    self.startHomeFlow()
                 }
                 
-        }) { (errorMessage, _, _) in
+        }) { (errorMessage, httpStatusCode, mvStatusCode) in
+            if httpStatusCode == 401 {
+                self.startAuthFlow()
+                return
+            }
+            
             self.alert(title: "Movieee", message: errorMessage, okayButtonTitle: "OK")
         }
     }

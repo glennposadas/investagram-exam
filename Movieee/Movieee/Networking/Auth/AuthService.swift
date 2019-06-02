@@ -36,7 +36,7 @@ extension AuthService: TargetType {
     var method: Moya.Method {
         switch self {
         case .newToken: return .get
-        case .validate: return .post
+        case .validate: return .get
         }
     }
     
@@ -60,7 +60,7 @@ extension AuthService: TargetType {
                     "username": username,
                     "password": password,
                     "request_token": MVDefaults.getObjectWithKey(.requestToken, type: String.self) ?? ""
-                ], encoding: JSONEncoding.default
+                ], encoding: URLEncoding.default
             )
         }
     }

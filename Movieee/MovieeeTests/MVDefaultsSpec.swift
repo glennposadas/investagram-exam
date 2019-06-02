@@ -63,7 +63,7 @@ class MVDefaultsSpec: QuickSpec {
                     expect(stringRetrievedObject).to(beNil())
                 }
                 
-                it("tests the store and retrieve function for Boool") {
+                it("tests the store and retrieve function for Bool") {
                     
                     let someBool: Bool = true
                     
@@ -72,10 +72,10 @@ class MVDefaultsSpec: QuickSpec {
                     let retrievedObject = MVDefaults.getObjectWithKey(.someOtherKey, type: Bool.self)
                     
                     // Assert
-                    expect(retrievedObject).notTo(beNil())
+                    expect(retrievedObject).to(equal(someBool))
                     
                     // Assert
-                    expect(retrievedObject).to(equal(someBool))
+                    expect(retrievedObject).notTo(beNil())
                 }
             }
         }

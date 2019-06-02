@@ -19,29 +19,32 @@ class MVDefaults {
     
     // MARK: - Functions
     
-    /// Stores token.
+    /// Stores object.
     class func store<T: Encodable>(_ object: T, key: MVDefaultsKey) {
-        UserDefaults.standard.set(object, forKey: key.rawValue)
+        let encoder = JSONEncoder()
+        let encoded = try? encoder.encode(object)
+        
+        if encoded == nil {
+            UserDefaults.standard.set(object, forKey: key.rawValue)
+            return
+        }
+        
+        UserDefaults.standard.set(encoded, forKey: key.rawValue)
     }
     
-    /// Removes the stored token
+    /// Removes the object token
     class func removeDefaultsWithKey(_ key: MVDefaultsKey) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
     
-    /// Returns stored token (optional) if any.
+    /// Returns stored object (optional) if any.
     class func getObjectWithKey<T: Decodable>(_ key: MVDefaultsKey, type: T.Type) -> T? {
-        if T.self == String.self {
-            return UserDefaults.standard.string(forKey: key.rawValue) as? T
+        if let savedData = UserDefaults.standard.data(forKey: key.rawValue) {
+            let object = try? JSONDecoder().decode(type, from: savedData)
+            return object
         }
         
-        guard let savedData = UserDefaults.standard.data(forKey: key.rawValue) else {
-            return nil
-        }
-        
-        let object = try? JSONDecoder().decode(type, from: savedData)
-        
-        return object
+        return UserDefaults.standard.object(forKey: key.rawValue) as? T
     }
 }
 

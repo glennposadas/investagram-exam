@@ -46,7 +46,7 @@ class HomeViewModel: NSObject {
     
     // MARK: Functions
     
-    func getTrendingToday() {
+    func getTrendingToday(showHUD: Bool = true) {
         if self.lastPageRequested == self.currentPage {
             print("Not so fast...")
             return
@@ -56,7 +56,7 @@ class HomeViewModel: NSObject {
         
         self.lastPageRequested = self.currentPage
         
-        APIManager.SearchCalls.getTrendingToday(page: self.currentPage, onSuccess: { (movieResult) in
+        APIManager.SearchCalls.getTrendingToday(page: self.currentPage, showHUD: showHUD, onSuccess: { (movieResult) in
             self.handleMovieResult(movieResult)
             
         }) { (errorMessage, _, _) in
@@ -65,14 +65,14 @@ class HomeViewModel: NSObject {
         }
     }
     
-    func search(_ query: String) {
+    func search(_ query: String, showHUD: Bool = true) {
         print("Searching: \(query) | Last Page Requested: \(self.lastPageRequestedForSearch)")
         
         if query != self.lastQuery.value {
             self.resetForSearchProperties()
         }
         
-        APIManager.SearchCalls.search(query, page: self.currentPageForSearch, onSuccess: { (movieResult) in
+        APIManager.SearchCalls.search(query, page: self.currentPageForSearch, showHUD: showHUD, onSuccess: { (movieResult) in
             self.handleMovieResult(movieResult)
             self.lastQuery.accept(query)
             
@@ -174,22 +174,33 @@ extension HomeViewModel: UITableViewDataSource {
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-            if (self.movieResult.value?.page == self.movieResult.value?.totalPages)
-                || (self.movieResultForSearch.value?.page == self.movieResultForSearch.value?.totalPages) {
+            func removeFooter() {
                 let transluscentView = UIView()
                 transluscentView.backgroundColor = .clear
                 tableView.tableFooterView = transluscentView
-                return
             }
             
             if self.userIsSearching.value {
+                
+                if self.movieResultForSearch.value?.page == self.movieResultForSearch.value?.totalPages {
+                    removeFooter()
+                    return
+                }
+                
                 // Load new page
                 self.currentPageForSearch = self.currentPageForSearch + 1
-                self.search(self.query.value)
+                self.search(self.query.value, showHUD: false)
+                
             } else {
+                
+                if self.movieResult.value?.page == self.movieResult.value?.totalPages {
+                    removeFooter()
+                    return
+                }
+                
                 // Load new page
                 self.currentPage = self.currentPage + 1
-                self.getTrendingToday()
+                self.getTrendingToday(showHUD: false)
 
             }
             
