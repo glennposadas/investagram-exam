@@ -77,6 +77,16 @@ class HomeTableViewController: UITableViewController {
         self.setupBindings()
         self.setupUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.hidesSearchBarWhenScrolling = true
+    }
 }
 
 // MARK: - HomeDelegate

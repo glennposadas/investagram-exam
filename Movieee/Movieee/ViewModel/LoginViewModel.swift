@@ -66,9 +66,9 @@ class LoginViewModel: NSObject {
                 if let _ = tokenResult {
                     // Success
                     if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                        let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
+                        let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
                         
-
+                        appDelegate.window?.rootViewController = homeNavigationController
                         UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
                             appDelegate.window?.rootViewController = homeNavigationController
                         }, completion: nil)

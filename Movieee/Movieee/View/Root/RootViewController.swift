@@ -18,6 +18,7 @@ class RootViewController: UIViewController {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             let loginNavigationController = storyboard_Auth.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
             
+            appDelegate.window?.rootViewController = loginNavigationController
             UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
                 appDelegate.window?.rootViewController = loginNavigationController
             }, completion: nil)
@@ -26,8 +27,9 @@ class RootViewController: UIViewController {
     
     func startHomeFlow() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeNavigationController") as! UINavigationController
+            let homeNavigationController = storyboard_Home.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
             
+            appDelegate.window?.rootViewController = homeNavigationController
             UIView.transition(with: appDelegate.window!, duration: 0.1, options: [], animations: {
                 appDelegate.window?.rootViewController = homeNavigationController
             }, completion: nil)
