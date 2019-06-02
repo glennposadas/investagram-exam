@@ -13,7 +13,7 @@ class MovieDetailsViewController: UIViewController {
     // MARK: - Properties
     
     lazy var viewModel: MovieDetailsViewModel = {
-       let viewModel = MovieDetailsViewModel(movieDetailsController: self)
+        let viewModel = MovieDetailsViewModel(movieDetailsController: self)
         return viewModel
     }()
     
@@ -35,12 +35,10 @@ class MovieDetailsViewController: UIViewController {
         
         if let resource = movie.posterResource {
             self.imageView_Poster.kf.setImage(with: resource, options: [.transition(.fade(0.2)), .cacheOriginalImage])
-            return
         }
         
         if let resource = movie.backdropResource {
             self.imageView_Backdrop.kf.setImage(with: resource, options: [.transition(.fade(0.2)), .cacheOriginalImage])
-            return
         }
     }
     

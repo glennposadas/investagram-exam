@@ -90,8 +90,8 @@ class HomeTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMovieDetails" {
-            let movieDetailsTVC = segue.destination as! MovieDetailsViewController
-            movieDetailsTVC.viewModel.movie = sender as? Movie
+            let movieDetailsVC = segue.destination as! MovieDetailsViewController
+            movieDetailsVC.viewModel.movie = sender as? Movie
         }
     }
 }
