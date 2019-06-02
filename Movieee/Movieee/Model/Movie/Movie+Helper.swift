@@ -64,7 +64,7 @@ extension Movie {
     /// Url is encoded.
     var backdropResource: Resource? {
         get {
-            let imagePath = "\(baseImagePath)/w300/\(self.backdropPath ?? "")"
+            let imagePath = "\(baseImagePath)/w500/\(self.backdropPath ?? "")"
             guard let url = imagePath.URLEscaped else { return nil }
             return ImageResource(downloadURL: url, cacheKey: url.absoluteString)
         }

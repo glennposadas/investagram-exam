@@ -30,6 +30,8 @@
 		45890A2C22A3AD5F006E823C /* MVKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45890A2B22A3AD5F006E823C /* MVKeychain.swift */; };
 		45890A2E22A3B12D006E823C /* MVSharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45890A2D22A3B12D006E823C /* MVSharedData.swift */; };
 		45890A3022A3D0E5006E823C /* MVDefaultsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45890A2F22A3D0E5006E823C /* MVDefaultsSpec.swift */; };
+		45890A3222A3F6EC006E823C /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45890A3122A3F6EC006E823C /* MovieDetailsViewController.swift */; };
+		45890A3422A3FD40006E823C /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45890A3322A3FD40006E823C /* MovieDetailsViewModel.swift */; };
 		45B9C23B229F10E000B837D3 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B9C23A229F10E000B837D3 /* Auth.storyboard */; };
 		45B9C244229FE43800B837D3 /* MVKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9C243229FE43800B837D3 /* MVKeys.swift */; };
 		45B9C24A22A008FE00B837D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B9C24922A008FE00B837D3 /* Home.storyboard */; };
@@ -100,6 +102,8 @@
 		45890A2B22A3AD5F006E823C /* MVKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVKeychain.swift; sourceTree = "<group>"; };
 		45890A2D22A3B12D006E823C /* MVSharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVSharedData.swift; sourceTree = "<group>"; };
 		45890A2F22A3D0E5006E823C /* MVDefaultsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVDefaultsSpec.swift; sourceTree = "<group>"; };
+		45890A3122A3F6EC006E823C /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		45890A3322A3FD40006E823C /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		45B9C23A229F10E000B837D3 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		45B9C243229FE43800B837D3 /* MVKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVKeys.swift; sourceTree = "<group>"; };
 		45B9C24922A008FE00B837D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -277,6 +281,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		45890A3522A3FD4A006E823C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */,
+				45890A3322A3FD40006E823C /* MovieDetailsViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		45890A3622A3FD54006E823C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				45DE6BF222A3A65C00411BB5 /* LoginViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		45B9C23C229FCCDE00B837D3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +335,8 @@
 		45B9C23F229FD80600B837D3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				45DE6BE022A2DBBA00411BB5 /* HomeViewModel.swift */,
-				45DE6BF222A3A65C00411BB5 /* LoginViewModel.swift */,
+				45890A3622A3FD54006E823C /* Auth */,
+				45890A3522A3FD4A006E823C /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -385,6 +406,7 @@
 		45B9C24822A0023700B837D3 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				45890A3122A3F6EC006E823C /* MovieDetailsViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -667,6 +689,7 @@
 				45890A2C22A3AD5F006E823C /* MVKeychain.swift in Sources */,
 				45DE6BE122A2DBBA00411BB5 /* HomeViewModel.swift in Sources */,
 				4575DFCC22A1683E00507908 /* MovieResult.swift in Sources */,
+				45890A3422A3FD40006E823C /* MovieDetailsViewModel.swift in Sources */,
 				45890A2E22A3B12D006E823C /* MVSharedData.swift in Sources */,
 				4575DFE022A170AA00507908 /* JSONArrayEncoding.swift in Sources */,
 				45DE6BDF22A2D72400411BB5 /* UIView+Movieee.swift in Sources */,
@@ -675,6 +698,7 @@
 				45DE6BEC22A3094700411BB5 /* AuthService.swift in Sources */,
 				4575DFDD22A170AA00507908 /* APIManager.swift in Sources */,
 				4575DFE222A170AA00507908 /* CustomServerTrustPoliceManager.swift in Sources */,
+				45890A3222A3F6EC006E823C /* MovieDetailsViewController.swift in Sources */,
 				4575DFC422A1655300507908 /* HomeTableViewController.swift in Sources */,
 				45B9C244229FE43800B837D3 /* MVKeys.swift in Sources */,
 				4575DFE522A17C9E00507908 /* LoginTableViewController.swift in Sources */,

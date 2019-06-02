@@ -13,7 +13,7 @@ import RxSwift
 
 /// The delegate of the ```HomeViewModel```
 protocol HomeDelegate: class {
-    
+    func showDetails(_ movie: Movie)
 }
 
 class HomeViewModel: NSObject {
@@ -147,7 +147,8 @@ extension HomeViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let _ = self.userIsSearching.value ? self.moviesForSearch[indexPath.row] : self.movies[indexPath.row]
+        let movie = self.userIsSearching.value ? self.moviesForSearch[indexPath.row] : self.movies[indexPath.row]
+        self.delegate?.showDetails(movie)
     }
 }
 

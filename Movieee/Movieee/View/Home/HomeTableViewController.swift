@@ -87,12 +87,21 @@ class HomeTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         self.navigationItem.hidesSearchBarWhenScrolling = true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMovieDetails" {
+            let movieDetailsTVC = segue.destination as! MovieDetailsViewController
+            movieDetailsTVC.viewModel.movie = sender as? Movie
+        }
+    }
 }
 
 // MARK: - HomeDelegate
 
 extension HomeTableViewController: HomeDelegate {
-    
+    func showDetails(_ movie: Movie) {
+        self.performSegue(withIdentifier: "showMovieDetails", sender: movie)
+    }
 }
 
 // MARK: - UISearchResultsUpdating
