@@ -13,15 +13,15 @@
         <scene sceneID="JEM-Cc-gRP">
             <objects>
                 <tableViewController storyboardIdentifier="LoginTableViewController" id="Vz1-HM-gOc" customClass="LoginTableViewController" customModule="Movieee" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" id="8sD-JZ-lkB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8sD-JZ-lkB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle=" " id="pzt-4F-hMY">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="7Uu-v5-DqD">
-                                        <rect key="frame" x="0.0" y="40" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Uu-v5-DqD" id="YJp-xc-4Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
@@ -43,7 +43,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="8r1-RP-jJ4">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8r1-RP-jJ4" id="9PU-VU-Mh7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
@@ -69,7 +69,7 @@
                             <tableViewSection headerTitle=" " id="OS7-Oj-ZTy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="mEV-2h-x3y">
-                                        <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="231.5" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEV-2h-x3y" id="63t-cC-zyc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
@@ -79,9 +79,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.45098039215686275" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="LOG IN"/>
-                                                    <connections>
-                                                        <action selector="login:" destination="Vz1-HM-gOc" eventType="touchUpInside" id="hmU-v1-4wR"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -102,6 +99,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Log In" id="SSQ-di-Mec"/>
                     <connections>
+                        <outlet property="button_Login" destination="JFr-TD-1Me" id="8il-kb-JeE"/>
                         <outlet property="textField_Email" destination="w8T-zh-CZv" id="e5X-Mz-CwL"/>
                         <outlet property="textField_Password" destination="uCb-9E-bov" id="QVl-go-9Rg"/>
                     </connections>
@@ -113,7 +111,7 @@
         <!--Navigation Controller-->
         <scene sceneID="IgB-ac-5zS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J3J-TT-Xrk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="J3J-TT-Xrk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uKe-ec-aXG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

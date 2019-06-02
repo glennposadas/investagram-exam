@@ -29,9 +29,9 @@ extension APIManager {
         
         /// Validates login
         static func login(username: String, password: String, onSuccess: @escaping TokenResultCallBack, onError: ErrorCallBack = nil) {
-            self.request(provider: searchServiceProvider, target: .search(query: query, page: page), onSuccess: { (data) in
-                let movieResult = try? JSONDecoder().decode(MovieResult.self, from: data)
-                onSuccess(movieResult)
+            self.request(provider: authServiceProvider, target: .validate(username: username, password: password), onSuccess: { (data) in
+                let tokenResult = try? JSONDecoder().decode(TokenResult.self, from: data)
+                onSuccess(tokenResult)
             }, onError: onError)
             
         }

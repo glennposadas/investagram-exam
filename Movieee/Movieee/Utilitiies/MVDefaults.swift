@@ -10,6 +10,7 @@ import Foundation
 
 enum MVDefaultsKey: String {
     case requestToken = "defaultsRequestToken"
+    case someOtherKey = "defaultsKeyForTests"
 }
 
 /// The class that has multiple class functions for handling defaults.
@@ -20,9 +21,7 @@ class MVDefaults {
     
     /// Stores token.
     class func store<T: Encodable>(_ object: T, key: MVDefaultsKey) {
-        let encoder = JSONEncoder()
-        let encoded = try? encoder.encode(object)
-        UserDefaults.standard.set(encoded, forKey: key.rawValue)
+        UserDefaults.standard.set(object, forKey: key.rawValue)
     }
     
     /// Removes the stored token
@@ -32,6 +31,10 @@ class MVDefaults {
     
     /// Returns stored token (optional) if any.
     class func getObjectWithKey<T: Decodable>(_ key: MVDefaultsKey, type: T.Type) -> T? {
+        if T.self == String.self {
+            return UserDefaults.standard.string(forKey: key.rawValue) as? T
+        }
+        
         guard let savedData = UserDefaults.standard.data(forKey: key.rawValue) else {
             return nil
         }
@@ -40,7 +43,6 @@ class MVDefaults {
         
         return object
     }
-    
 }
 
 

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="QIh-fa-Eb6">
             <objects>
-                <viewController id="Thr-bo-4Of" sceneMemberID="viewController">
+                <viewController id="Thr-bo-4Of" customClass="RootViewController" customModule="Movieee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ble-zo-dhB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

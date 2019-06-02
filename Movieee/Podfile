@@ -17,7 +17,6 @@ target 'Movieee' do
   
   pod 'IQKeyboardManagerSwift',     '~> 6.2.1'              # Codeless Keyboard Manager
   pod 'Kingfisher',                 '~> 5.3.1'              # Loading of url image into imageViews
-  pod 'Localize-Swift',             '~> 2.0.0'              # Localization
   pod 'Moya',                       '~> 13.0.0'             # Networking Abstraction Layer
   pod 'SVProgressHUD',              '~> 2.2.5'              # HUD Loader
   
