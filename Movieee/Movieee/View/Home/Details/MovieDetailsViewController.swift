@@ -27,6 +27,7 @@ class MovieDetailsViewController: UIViewController {
     // MARK: - Functions
     
     private func setupBindings() {
+        // TODO: Utilize the viewModel.
         let movie = self.viewModel.movie!
         self.label_Title.text = movie.titlePresentable
         self.label_Date.text = movie.releaseDatePresentable

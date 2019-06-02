@@ -2,6 +2,26 @@
 
 This project was made for Investagram's online assessment test.
 
+### Progress and TODOS:
+
+• Login 
+* Using username and password (created in www.themoviedb.org) ✅
+
+• Home 
+* Listing of Trending Movies ✅
+* Search mechanism for movies ✅
+
+• Movie Details & Ratings Page 
+* Show Movie Details ✅
+* Show Movie Reviews
+* Show Rating 
+* Post Rating
+* Delete Rating
+* Add to Watchlist
+
+• Watchlist
+* Listing of movies in your watchlist
+
 
 ### Tech and Tools
 
